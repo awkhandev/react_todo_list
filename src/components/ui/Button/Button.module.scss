@@ -1,0 +1,75 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.button {
+  @include flex-center($space-2);
+  @include focus-ring;
+  border: 1px solid transparent;
+  border-radius: $radius-md;
+  font-weight: 400;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.md {
+  height: 2.4rem;
+  padding: 0 $space-4;
+  font-size: 0.95rem;
+}
+
+.sm {
+  height: 1.9rem;
+  padding: 0 $space-3;
+  font-size: 0.85rem;
+}
+
+.iconOnly {
+  padding: 0;
+  aspect-ratio: 1;
+}
+
+.primary {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-on-primary);
+
+  &:hover:not(:disabled) {
+    background: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+  }
+}
+
+.secondary {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-text);
+
+  &:hover:not(:disabled) {
+    background: var(--color-surface-muted);
+  }
+}
+
+.ghost {
+  background: transparent;
+  color: var(--color-text-muted);
+
+  &:hover:not(:disabled) {
+    background: var(--color-surface-muted);
+    color: var(--color-text);
+  }
+}
+
+.danger {
+  background: transparent;
+  color: var(--color-text-muted);
+
+  &:hover:not(:disabled) {
+    background: var(--color-danger-soft);
+    color: var(--color-danger);
+  }
+}
