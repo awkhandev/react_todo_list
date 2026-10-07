@@ -1,0 +1,69 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+:root {
+  --color-bg: #f2f2f2;
+  --color-surface: #ffffff;
+  --color-surface-muted: #fafafa;
+  --color-border: #cccccc;
+  --color-text: #222222;
+  --color-text-muted: #666666;
+  --color-primary: #0b63ce;
+  --color-primary-hover: #094fa6;
+  --color-primary-soft: #e7f0fa;
+  --color-on-primary: #ffffff;
+  --color-danger: #c0392b;
+  --color-danger-hover: #a93226;
+  --color-danger-soft: #fdecea;
+  --color-success: #1e7a3a;
+  --shadow-card: none;
+
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

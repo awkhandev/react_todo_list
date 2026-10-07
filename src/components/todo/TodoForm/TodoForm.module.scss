@@ -1,0 +1,11 @@
+@use '../../../styles/variables' as *;
+
+.form {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-3;
+}
+
+.submit {
+  flex-shrink: 0;
+}

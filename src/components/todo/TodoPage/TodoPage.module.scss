@@ -1,0 +1,37 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.page {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: $space-5 $space-4;
+
+  @include mobile {
+    padding: $space-4 $space-2;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  width: 100%;
+  max-width: 680px;
+  height: fit-content;
+  padding: $space-5;
+  border: 1px solid var(--color-border);
+  border-radius: $radius-lg;
+  background: var(--color-surface);
+
+  @include mobile {
+    padding: $space-4;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  min-height: 160px;
+}
