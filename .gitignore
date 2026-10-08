@@ -23,3 +23,5 @@ npm-cache
 *.njsproj
 *.sln
 *.sw?
+.vercel
+.env*
